@@ -49,6 +49,19 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-today-card d-flex align-items-center">
                         <div class="flex-grow-1">
+                            <span class="today">Ongoing Investments</span>
+                            <h6>$ {{number_format($ongoingInvestments,2)}}</h6>
+                        </div>
+
+                        <div class="flex-shrink-0 align-self-center">
+                            <img src="{{asset('dashboard/user/images/icon/user.png')}}" alt="Images">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-today-card d-flex align-items-center">
+                        <div class="flex-grow-1">
                             <span class="today">Total profit</span>
                             <h6>${{number_format($user->profit,2)}}</h6>
                         </div>
@@ -157,24 +170,13 @@
                             </h6>
 
                             <div class="row justify-content-center">
-                                <div class="col-lg-3 col-sm-6 col-md-3">
-                                    <div class="active-single-item">
-                                        <p>
-                                            <img src="{{asset('dashboard/user/images/icon/user-2.png')}}" alt="Images">
-                                            Ongoing Investments
-                                            <span>
-                                                {{number_format($ongoingInvestments->count(),2)}}
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
 
                                 <div class="col-lg-3 col-sm-6 col-md-3">
                                     <div class="active-single-item">
                                         <p>
                                             <img src="{{asset('dashboard/user/images/icon/curser.png')}}" alt="Images">
                                             Completed Investments
-                                            <span>{{number_format($completedInvestments->count(),2)}}</span>
+                                            <span>${{number_format($completedInvestments,2)}}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -184,7 +186,7 @@
                                         <p>
                                             <img src="{{asset('dashboard/user/images/icon/discount-2.png')}}" alt="Images">
                                             Pending Deposits
-                                            <span>{{number_format($pendingDeposit->count(),2)}}</span>
+                                            <span>${{number_format($pendingDeposit,2)}}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -194,7 +196,7 @@
                                         <p>
                                             <img src="{{asset('dashboard/user/images/icon/discount-2.png')}}" alt="Images">
                                             Pending Withdrawals
-                                            <span>{{number_format($pendingWithdrawal->count(),2)}}</span>
+                                            <span>${{number_format($pendingWithdrawal,2)}}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -204,7 +206,7 @@
                                         <p>
                                             <img src="{{asset('dashboard/user/images/icon/items.png')}}" alt="Images">
                                             Completed Withdrawals
-                                            <span> {{number_format($withdrawals->count(),2)}}</span>
+                                            <span> ${{number_format($withdrawals,2)}}</span>
                                         </p>
                                     </div>
                                 </div>
