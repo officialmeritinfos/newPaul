@@ -84,7 +84,7 @@ class Investors extends Controller
     public function activateLoan($id)
     {
         $data =[
-            'canLoan'=>1
+            'canCompound'=>1
         ];
         User::where('id',$id)->update($data);
 
@@ -93,7 +93,7 @@ class Investors extends Controller
     public function deactivateLoan($id)
     {
         $data =[
-            'canLoan'=>2
+            'canCompound'=>2
         ];
         User::where('id',$id)->update($data);
 
